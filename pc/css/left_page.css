@@ -1,0 +1,49 @@
+.page_left{
+
+	background-image: url(../img/left_page.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+
+	position: absolute;
+	width: 80%;
+	height: 580px;
+	/*border: solid 1px yellow;*/
+	/*opacity: 0.5;*/
+	left: -80%;
+	box-shadow:inset 0px 0px 200px black;
+	z-index: -1;
+}
+.project_wrap *{
+	background: transparent;
+	font-family: '宋体';
+}
+.project_wrap{
+	position: relative;
+	width: 70%;
+	margin: 8% 20%;
+	background: transparent;
+	border: solid 1px black;
+	box-shadow: 0 0 5px white;
+	transition: all 0.5s ease;
+	opacity: 0;
+
+}
+.project_wrap ul ,.project_wrap li{
+	margin-left: 10px;
+	background: transparent;
+	color: white;
+	transition: all 0.5s ease;
+}
+.project_wrap:hover{
+	border: solid 1px #a94442;
+	background: rgba(0,0,0,0.6);
+}
+h5{
+	color: white;
+}
+
+.project_wrap li:hover{
+	box-shadow: 0 0 2px white;
+	
+}
