@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>加入我们</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<!---<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">--->
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+		<link rel="stylesheet" href="css/font-awesome.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<!--[if IE]>
+		<script src="js/html5.js"></script>
+		<![endif]-->
+        <style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	</head>
+	<body>
+		<div id="page-preloader"><span class="spinner"></span></div>
+		<header id="header" class="clear">
+			<a href="index.html" class="logo">欢迎来到我们的世界</a>
+			<div class="header-right">
+				<div class="header-search">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+			</div>
+			<nav class="navbar">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav menu">						<li class="dropdown"><a href="index.html">首页</a></li>
+						<li><a href="blog.html">专业介绍</a></li>
+						<li><a href="gallery.html">作品欣赏</a></li>
+						<li><a href="about_us.html">优秀大师</a></li>
+						<li><a href="contacts.html">加入我们</a></li>
+                        
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- header -->
+		<div class="breadcrumbs-wrapper">
+			<ul class="breadcrumbs">
+            <li><a href="index.html" class="home"><i class="fa fa-television" aria-hidden="true"></i></a></li>
+            <li>加入我们</li>
+			</ul>
+		</div>
+		<!-- breadcrumbs-wrapper -->
+		<section class="content-wrapper">
+			<div class="container">
+				<div class="title">
+					<h1>Contacts</h1>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<div class="clear">
+							<div class="contact-block pic1">
+								<h5>Meet Us</h5>
+								<p>山西省太原市中北大学艺术学院国际班</p>
+							</div>
+							<div class="contact-block pic2">
+								<h5>Phone</h5>
+								<p>8 (800) 222-22-22 <br> 8 (800) 222-22-33</p>
+							</div>
+							<div class="contact-block pic3">
+								<h5>E-mail</h5>
+								<p>zhongbeidaxueyishuxueyuan@gmail.com</p>
+							</div>
+							<div class="contact-block pic4">
+								<h5>we chat</h5>
+								<p>huangyan1102</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+						<p><i>The Art Institute Of North University Of China
+.</i></p>
+						<DIV> 
+						  <p>Founded&nbsp;in&nbsp;September&nbsp;2004,</p>
+						  <p>&nbsp;the&nbsp;college&nbsp;was&nbsp;formerly&nbsp;the&nbsp;department&nbsp;of&nbsp;music&nbsp;and&nbsp;the&nbsp;department&nbsp;of&nbsp;industrial&nbsp;design&nbsp;of&nbsp;north&nbsp;central&nbsp;university.<br>
+					      </p>
+			          </DIV>
+						<p>&nbsp;</p>
+					</div>
+					<div class="col-md-4 contact-area">
+						<h4>Contact Form</h4>
+						<div class="input-block name-form">
+							<input type="text" placeholder="Name">
+						</div>
+						<div class="input-block phone-form">
+							<input type="text" placeholder="Phone">
+						</div>
+						<div class="input-block email-form">
+							<input type="text" placeholder="E-mail">
+						</div>
+						<div class="input-block message-form">
+							<textarea placeholder="Message"></textarea>
+						</div>
+						<input type="submit" value="Send Message">
+					</div>
+				</div>
+				 <div style="margin:30px 0px 0px 0px;width:100%;height:500px;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //???????????????????
+    function initMap(){
+        createMap();//???????
+        setMapEvent();//?????????
+        addMapControl();//?????????
+        addMarker();//?????????marker
+    }
+    
+    //?????????????
+    function createMap(){
+        var map = new BMap.Map("dituContent");//???????????��?????????
+        var point = new BMap.Point(112.45758,38.022336);//????????????????
+        map.centerAndZoom(point,18);//?څ?????????????????????????????????
+        window.map = map;//??map?????��?????
+    }
+    
+    //?????????��?????
+    function setMapEvent(){
+        map.enableDragging();//?????????????????????(???��)
+        map.enableScrollWheelZoom();//??????????????��
+        map.enableDoubleClickZoom();//????????????????????(???��)
+        map.enableKeyboard();//???��??????????????????
+    }
+    
+    //??????????????
+    function addMapControl(){
+                        //????????????????
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_TOP_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //?????????
+    /*var markerArr = [{title:"?��???????��",content:"?????",point:"112.457575|38.022358",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+		 ];*/
+    //????marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //????InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //???????Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//?????????????
+</script>
+			</div>
+		</section>
+		<!-- content-wrapper -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+				<ul class="social">
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+				</ul>
+			</div></div>
+		</footer>
+		<!-- footer -->
+		<!-- scripts -->	
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/lib/lightbox.min.js"></script>
+		<script src="js/lib/shuffle.js"></script>	
+		<script src="js/lib/swiper.min.js"></script>
+		<script src="js/lib/waypoints.min.js"></script>		
+		<script src="js/script.js"></script>
+	</body>
+</html>
